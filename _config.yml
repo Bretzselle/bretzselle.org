@@ -24,9 +24,14 @@ defaults:
       layout: page
 
 exclude:
+  - vendor/
   - websites/
   - README.md
   - CLAUDE.md
   - Gemfile
   - Gemfile.lock
+  - flake.nix
+  - flake.lock
   - .git
+  - .direnv/
+  - .envrc

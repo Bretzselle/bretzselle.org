@@ -1,7 +1,10 @@
 {
   "permissions": {
     "allow": [
-      "WebFetch(domain:web.archive.org)"
+      "WebFetch(domain:web.archive.org)",
+      "Bash(nix develop:*)",
+      "Bash(nix run:*)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:4000/)"
     ]
   }
 }

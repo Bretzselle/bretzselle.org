@@ -12,10 +12,28 @@
         pkgs = nixpkgs.legacyPackages.${system};
         ruby = pkgs.ruby_3_3;
       in {
+        apps.default =
+          let
+            serve = pkgs.writeShellApplication {
+              name = "bretzselle-serve";
+              runtimeInputs = [
+                ruby pkgs.pkg-config
+                pkgs.libxml2 pkgs.libxslt pkgs.zlib pkgs.openssl
+              ] ++ pkgs.lib.optionals pkgs.stdenv.isDarwin [ pkgs.libiconv ];
+              text = ''
+                export BUNDLE_PATH="$PWD/vendor/bundle"
+                export PKG_CONFIG_PATH="${pkgs.libxml2.dev}/lib/pkgconfig:${pkgs.libxslt.dev}/lib/pkgconfig:${pkgs.zlib.dev}/lib/pkgconfig"
+                export NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+                bundle install
+                bundle exec jekyll serve --livereload
+              '';
+            };
+          in
+          { type = "app"; program = "${serve}/bin/bretzselle-serve"; };
+
         devShells.default = pkgs.mkShell {
           packages = [
             ruby
-            pkgs.bundler
             pkgs.pkg-config
             pkgs.libxml2
             pkgs.libxslt
@@ -23,8 +41,6 @@
             pkgs.openssl
           ] ++ pkgs.lib.optionals pkgs.stdenv.isDarwin [
             pkgs.libiconv
-            pkgs.darwin.apple_sdk.frameworks.CoreFoundation
-            pkgs.darwin.apple_sdk.frameworks.Security
           ];
 
           shellHook = ''
