@@ -1,0 +1,32 @@
+title: Bretz'selle
+description: Les ateliers vélo où c'est toi le mécano — Strasbourg
+url: "https://bretzselle.org"
+baseurl: ""
+lang: fr
+
+markdown: kramdown
+permalink: pretty
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: page
+
+exclude:
+  - websites/
+  - README.md
+  - CLAUDE.md
+  - Gemfile
+  - Gemfile.lock
+  - .git

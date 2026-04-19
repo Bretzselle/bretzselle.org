@@ -1,0 +1,44 @@
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+
+      <div>
+        <strong class="footer-logo">Bretz&rsquo;selle</strong>
+        <address class="footer-address">
+          {{ site.data.contact.address }}<br>
+          {{ site.data.contact.city }}<br>
+          <a href="tel:{{ site.data.contact.phone | remove: ' ' }}">{{ site.data.contact.phone }}</a><br>
+          <a href="mailto:{{ site.data.contact.email }}">{{ site.data.contact.email }}</a>
+        </address>
+      </div>
+
+      <div>
+        <p class="footer-section-title">Permanences</p>
+        <table class="footer-hours-table">
+          {% for slot in site.data.hours %}
+          <tr>
+            <td class="day">{{ slot.day }}</td>
+            <td>{{ slot.hours }}{% if slot.note %} <small style="opacity:.6">({{ slot.note }})</small>{% endif %}</td>
+          </tr>
+          {% endfor %}
+        </table>
+      </div>
+
+      <div>
+        <p class="footer-section-title">Participer</p>
+        <ul class="footer-links">
+          <li><a href="{{ '/adherer/' | relative_url }}">Adhérer à l&rsquo;association</a></li>
+          <li><a href="{{ '/participer/devenir-benevole/' | relative_url }}">Devenir bénévole</a></li>
+          <li><a href="{{ '/participer/donner-un-velo/' | relative_url }}">Donner un vélo</a></li>
+          <li><a href="{{ '/participer/se-tenir-informe/' | relative_url }}">Se tenir informé·e</a></li>
+          <li><a href="{{ '/actualites/' | relative_url }}">Actualités</a></li>
+        </ul>
+      </div>
+
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; {{ 'now' | date: "%Y" }} Bretz&rsquo;selle &mdash; Association loi 1901</span>
+      <span>10, rue des Bouchers &mdash; Strasbourg</span>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,41 @@
+- title: "Accueil"
+  url: /
+
+- title: "L'association"
+  url: /lassociation/
+  children:
+    - title: "L'esprit Bretz'selle"
+      url: /lassociation/esprit/
+    - title: "Fonctionnement"
+      url: /lassociation/fonctionnement/
+    - title: "Historique"
+      url: /lassociation/historique/
+    - title: "Les liens des copain·es"
+      url: /lassociation/liens/
+
+- title: "Activités"
+  url: /activites/
+  children:
+    - title: "Atelier d'auto-réparation"
+      url: /activites/atelier-auto-reparation/
+    - title: "Perm des Bouchèrxs"
+      url: /activites/perm-des-boucherxs/
+    - title: "Apéros-démontage"
+      url: /activites/apero-demontage/
+
+- title: "Participer"
+  url: /participer/
+  children:
+    - title: "Devenir bénévole"
+      url: /participer/devenir-benevole/
+    - title: "Donner un vélo"
+      url: /participer/donner-un-velo/
+    - title: "Se tenir informé·e"
+      url: /participer/se-tenir-informe/
+
+- title: "Adhérer"
+  url: /adherer/
+  cta: true
+
+- title: "Actus"
+  url: /actualites/

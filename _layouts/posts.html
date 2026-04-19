@@ -1,0 +1,32 @@
+---
+layout: default
+---
+<div class="page-wrap">
+  <div class="container">
+    <header class="page-header">
+      <h1>{{ page.title | default: "Actualités" }}</h1>
+    </header>
+    {% if site.posts.size > 0 %}
+    <div class="posts-grid">
+      {% for post in site.posts %}
+      <article class="news-card">
+        {% if post.image %}
+        <div class="news-card-thumb">
+          <img src="{{ post.image | relative_url }}" alt="{{ post.title }}">
+        </div>
+        {% else %}
+        <div class="news-card-thumb-placeholder"></div>
+        {% endif %}
+        <div class="news-card-body">
+          <div class="news-date">{{ post.date | date: "%-d %B %Y" }}</div>
+          <h2 class="news-title" style="font-size: 0.95rem;">{{ post.title }}</h2>
+          <a href="{{ post.url | relative_url }}" class="news-more">Lire la suite &rarr;</a>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+    {% else %}
+    <p class="posts-empty">Aucune actualité pour le moment. Revenez bientôt&nbsp;!</p>
+    {% endif %}
+  </div>
+</div>

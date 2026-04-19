@@ -1,0 +1,141 @@
+---
+layout: default
+---
+
+<!-- ======= HERO ======= -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <h1>Bretz&rsquo;selle &mdash; les ateliers vélo où <em>c&rsquo;est toi le mécano&nbsp;!</em></h1>
+      <p class="hero-lead">
+        Bretz&rsquo;selle est une association strasbourgeoise dédiée à la <strong>promotion active du vélo</strong>.
+        Elle se base sur l&rsquo;apprentissage de la mécanique, la mise à disposition d&rsquo;ateliers équipés,
+        le réemploi de vélos inutilisés et l&rsquo;organisation de festivités vélo tout au long de l&rsquo;année.
+      </p>
+      <p class="hero-lead">
+        L&rsquo;association anime des permanences quotidiennes d&rsquo;<strong>auto-réparation</strong>
+        à l&rsquo;atelier du 10, rue des Bouchers.
+      </p>
+      <div class="hero-membership">
+        <h3>En devenant adhérent·e, tu accèdes à&nbsp;:</h3>
+        <ul>
+          <li>des outils</li>
+          <li>des pièces détachées</li>
+          <li>des conseils</li>
+        </ul>
+        <p>L&rsquo;objectif est que tu deviennes autonome : à toi de mettre les mains dans le cambouis&nbsp;!</p>
+        <a href="{{ '/adherer/' | relative_url }}" class="btn btn-primary">Adhérer à l&rsquo;association &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======= HOURS + RECURRING EVENTS ======= -->
+<section class="info-section">
+  <div class="container">
+    <div class="info-grid">
+
+      <!-- Hours -->
+      <div class="card">
+        <h2 class="card-title">🕐 Permanences</h2>
+        <table class="hours-table">
+          {% for slot in site.data.hours %}
+          <tr>
+            <td class="day">{{ slot.day }}</td>
+            <td>
+              {{ slot.hours }}
+              {% if slot.note %}<span class="note">({{ slot.note }})</span>{% endif %}
+            </td>
+          </tr>
+          {% endfor %}
+        </table>
+        <p class="hours-note">
+          * <strong>Perm des Bouchèrxs</strong> : permanence en non-mixité de genre sans hommes cis
+          (pour les femmes, les minorités de genre&hellip;)
+        </p>
+      </div>
+
+      <!-- Recurring events -->
+      <div class="card">
+        <h2 class="card-title">📅 Les rendez-vous de l&rsquo;atelier</h2>
+        <div class="recurring-list">
+          <div class="recurring-item">
+            <span class="recurring-when">2e &amp; 4e vendredi</span>
+            <div class="recurring-info">
+              <h4><a href="{{ '/activites/apero-demontage/' | relative_url }}">Apéros-démontage</a></h4>
+              <p>Soirée conviviale autour du démontage de vélos</p>
+            </div>
+          </div>
+          <div class="recurring-item">
+            <span class="recurring-when">Tous les lundis</span>
+            <div class="recurring-info">
+              <h4><a href="{{ '/activites/perm-des-boucherxs/' | relative_url }}">Perm des Bouchèrxs *</a></h4>
+              <p>Permanence en non-mixité de genre</p>
+            </div>
+          </div>
+          <div class="recurring-item">
+            <span class="recurring-when">Tous les jeudis</span>
+            <div class="recurring-info">
+              <h4>Permanence bénévole</h4>
+              <p>Accueil par les bénévoles de l&rsquo;association</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ======= NEWSLETTER + CALENDAR ======= -->
+<section class="engage-section">
+  <div class="container">
+    <p class="section-title">Rester en contact</p>
+    <div class="engage-grid">
+      <div class="engage-card">
+        <div class="engage-icon">✉️</div>
+        <h3>S&rsquo;inscrire à la newsletter</h3>
+        <p>Les actualités et temps forts de Bretz&rsquo;selle sont à retrouver dans ses légendaires newsletters&nbsp;!</p>
+        <a href="{{ '/participer/se-tenir-informe/' | relative_url }}" class="btn btn-outline">En savoir plus</a>
+      </div>
+      <div class="engage-card">
+        <div class="engage-icon">📆</div>
+        <h3>Calendrier de l&rsquo;asso</h3>
+        <p>Suivez de près les rendez-vous et activités de Bretz&rsquo;selle tout au long de l&rsquo;année.</p>
+        <a href="{{ '/actualites/' | relative_url }}" class="btn btn-outline">Voir les actualités</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======= RECENT NEWS ======= -->
+{% if site.posts.size > 0 %}
+<section class="news-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Actualités</h2>
+      <a href="{{ '/actualites/' | relative_url }}" class="btn btn-dark btn-sm">Toutes les actualités</a>
+    </div>
+    <div class="news-grid">
+      {% for post in site.posts limit: 4 %}
+      <article class="news-card">
+        {% if post.image %}
+        <div class="news-card-thumb">
+          <img src="{{ post.image | relative_url }}" alt="{{ post.title }}">
+        </div>
+        {% else %}
+        <div class="news-card-thumb-placeholder"></div>
+        {% endif %}
+        <div class="news-card-body">
+          <div class="news-date">{{ post.date | date: "%-d %B %Y" }}</div>
+          <h3 class="news-title">{{ post.title }}</h3>
+          <a href="{{ post.url | relative_url }}" class="news-more">Lire la suite &rarr;</a>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{{ content }}

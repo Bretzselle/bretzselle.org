@@ -1,0 +1,42 @@
+<header class="site-header">
+  <div class="container">
+    <a href="{{ '/' | relative_url }}" class="site-logo" aria-label="{{ site.title }}">
+      <span class="logo-eyebrow">Ateliers</span>
+      <span class="logo-name">Bretz&rsquo;selle</span>
+    </a>
+
+    <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="site-nav">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="site-nav" id="site-nav" aria-label="Navigation principale">
+      <ul>
+        {% for item in site.data.navigation %}
+        {% if item.children %}
+        <li class="nav-item has-dropdown">
+          <a href="{{ item.url | relative_url }}" class="nav-link{% if page.url contains item.url and item.url != '/' %} active{% endif %}">
+            {{ item.title }}<span class="chevron">&#9660;</span>
+          </a>
+          <ul class="dropdown">
+            {% for child in item.children %}
+            <li>
+              <a href="{{ child.url | relative_url }}" class="dropdown-link{% if page.url == child.url %} active{% endif %}">
+                {{ child.title }}
+              </a>
+            </li>
+            {% endfor %}
+          </ul>
+        </li>
+        {% else %}
+        <li class="nav-item">
+          <a href="{{ item.url | relative_url }}"
+             class="nav-link{% if item.cta %} nav-cta{% endif %}{% if page.url == item.url %} active{% endif %}">
+            {{ item.title }}
+          </a>
+        </li>
+        {% endif %}
+        {% endfor %}
+      </ul>
+    </nav>
+  </div>
+</header>
