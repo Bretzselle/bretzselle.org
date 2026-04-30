@@ -25,7 +25,7 @@
                 export PKG_CONFIG_PATH="${pkgs.libxml2.dev}/lib/pkgconfig:${pkgs.libxslt.dev}/lib/pkgconfig:${pkgs.zlib.dev}/lib/pkgconfig"
                 export NOKOGIRI_USE_SYSTEM_LIBRARIES=true
                 bundle install
-                bundle exec jekyll serve --livereload
+                bundle exec jekyll serve
               '';
             };
           in

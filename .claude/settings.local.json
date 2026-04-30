@@ -4,7 +4,10 @@
       "WebFetch(domain:web.archive.org)",
       "Bash(nix develop:*)",
       "Bash(nix run:*)",
-      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:4000/)"
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:4000/)",
+      "Bash(pkill -f \"jekyll serve\")",
+      "Bash(pkill -f \"bretzselle-serve\")",
+      "Bash(grep -i -E '\\\\.\\(png|ico|svg|webp\\)$')"
     ]
   }
 }
