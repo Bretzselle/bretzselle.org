@@ -4,9 +4,9 @@ title: Perm des Bouchèrxs
 permalink: /activites/perm-des-boucherxs/
 ---
 
-La Perm des Bouchèrxs est une permanence d'auto-réparation vélo en **non-mixité de genre sans hommes cis**.
+La Perm des Bouchèrxs est une permanence d'auto-réparation vélo en **mixité choisie de genre sans hommes cisgenre**.
 
-Elle s'adresse aux femmes, aux minorités de genre et à toutes les personnes qui souhaitent un espace plus sécurisé pour apprendre la mécanique vélo.
+Elle s'adresse aux femmes et aux minorités de genre qui souhaitent un espace plus sécurisé pour apprendre la mécanique vélo.
 
 ## Quand ?
 
