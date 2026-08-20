@@ -10,7 +10,7 @@ Rejoindre Bretz'selle, c'est soutenir une association qui œuvre pour la promoti
 
 En devenant adhérent·e, tu as accès à :
 
-- **L'atelier** et tous ses outils
+- **L'atelier** et tous ses outils!
 - **Des pièces détachées** (à prix libre ou solidaire)
 - **L'accompagnement** des bénévoles pour apprendre à réparer
 
