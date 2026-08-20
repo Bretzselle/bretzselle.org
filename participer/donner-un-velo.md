@@ -10,7 +10,7 @@ Si tu as un vélo inutilisé chez toi, si tu veux te débarrasser d'une bicyclet
 
 ## Pourquoi donner son vélo ?
 
-Chaque vélo donné sera diagnostiqué par les salariés et bénévoles de l'association. 
+Chaque vélo donné sera diagnostiqué avec soin.
 + S'il est en bon état, il sera réparé et ses pneus continueront à rouler libres et heureux sur les magnifiques pistes cyclables de cette ville incroyablement belle et bike-friendly. Dring dring et klingeling sur le Ring !
 + Les vélos qui ne peuvent pas être réparés prendront le chemin du remploi : les bénévoles et adhérent·es les désassembleront pendant les apéros-démontage. Vu que tout est bon s'il y a un guidon, vos dérailleurs, manettes, roues et co. serviront à d'autres personnes pour réparer leurs bicyclettes.
 
