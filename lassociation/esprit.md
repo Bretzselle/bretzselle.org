@@ -1,11 +1,12 @@
 ---
 layout: page
-title: L'esprit Bretz'selle
-permalink: /lassociation/esprit/
+title: Bretz'selle en synthèse
+permalink: /lassociation/synthese/
 ---
 
-*Ce contenu est à compléter par l'équipe de Bretz'selle.*
+Bretz'selle est un lieu où tu pourras apprendre à réparer ton vélo. À Bretz'selle, on peut aussi apprendre à partager des outils, à gérer ensemble un espace, à aider les autres sans faire les choses à leur place. 
 
-Bretz'selle, c'est avant tout un état d'esprit : celui d'une communauté bienveillante où chacun·e peut apprendre à entretenir son vélo, dans un cadre convivial et solidaire.
+Bretz'selle est une association qui existe depuis 2010 et qui veut réduire les déchets grâce à la réparation et au remploi, qui veut aider les Strasbourgeois⋅es à rouler encore plus à vélo, qui veut briser les barrières invisibles qui empêchent certaines personnes de mettre les mains dans le cambouis. Et souvent, grace à des outils comme une boule à facette disco et un vélo canapé, Bretz'selle arrive à faire tout ça avec ironie et légèreté.
 
-L'association promeut l'autonomie, le partage des savoirs et la convivialité autour du vélo.
+Bretz'selle est un lieu où un millier de personnes rentrent chaque année pour faire une petite réparation pas chère, ou plusieurs centaines de personnes retournent car l'idée est sympa et le café est bon, et où certaines personnes choisissent de passer leur temps libre à aider les autres, avec des remerciements comme seule contrepartie. Des remerciements, et un dérailleur Shimano 600 Arabesque trouvé derrière une caisse, en nettoyant.
+ 
